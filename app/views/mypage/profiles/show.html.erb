@@ -38,6 +38,11 @@
           <%= f.label :name, class: 'form-label' %>
           <%= f.text_field :name, class: 'form-control', placeholder: 'らんてくん' %>
         </div>
+        <div class="mb-3">
+          <%= f.label :gender %>
+          <br>
+          <%= f.select :gender, User.genders_i18n.keys.map { |k| [User.genders_i18n[k], k] }, class: 'form-control' %>
+        </div>
         <div class="col-12">
           <!-- Button -->
           <%= f.submit class: 'btn btn-primary' %>
