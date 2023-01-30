@@ -28,7 +28,7 @@ class Event < ApplicationRecord
     !past?
   end
 
-  def only_woman_event?(user)
+  def participatable?(user)
     !only_woman || only_woman && user.woman?
   end
 end
